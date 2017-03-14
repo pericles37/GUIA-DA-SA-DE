@@ -25,7 +25,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'view-inicial': {
           templateUrl: 'templates/login.html',
-          controller: 'DashCtrl'
+          controller: 'LoginCtrl'
         }
       }
     })
@@ -34,7 +34,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'view-inicial': {
           templateUrl: 'templates/cadastro.html',
-          controller: 'DashCtrl'
+          controler:'loginCtr'
+         
         }
       }
     })
@@ -42,8 +43,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/tarefas',
       views: {
         'view-inicial': {
-          templateUrl: 'templates/tarefas.html',
-          controller: 'DashCtrl'
+          templateUrl: 'templates/tarefas.html'
         }
       }
     })
