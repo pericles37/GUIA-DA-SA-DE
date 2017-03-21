@@ -5,15 +5,8 @@
   $scope.email = '';
   $scope.senha = '';
 
-  $scope.fazerLogin = function(email, senha) {
-Login.login(email, senha, function(erro) {
-      alert(erro);
-        if (erro) {
-          alert(erro);
-         }else {
-           $state.go("tarefas");
-         }
-    });
+  $scope.continuar = function() {
+ $state.go("clinicasehospitais");
   }
 
   $scope.novoCadastro = function(email, senha) {
@@ -23,12 +16,11 @@ Login.login(email, senha, function(erro) {
   }
 })
 
-.controller('TarefasCtrl', function($scope, Tarefas) {
-  $scope.tarefas = [ ];
-  Tarefas.get(function(valores){
-    $scope.tarefas = converterObjParaArray(valores)
-    $scope.$apply();
-  })
+.controller('clinicasehospitaisCtrl', function($scope, $state, Tarefas) {
+
+  $scope.informacoes = function() {
+   $state.go("informacoes");
+  }
 })
 
 function converterObjParaArray (obj) {

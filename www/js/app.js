@@ -28,26 +28,27 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('cadastro', {
-      url: '/cadastro',
-      views:{
-      'view-inicial': {
-        templateUrl: 'templates/cadastro.html',
-        controller: 'LoginCtrl'
-        }
-      }
-    })
-  .state('tarefas', {
-    url: '/tarefas',
+
+  .state('clinicasehospitais', {
+    url: '/clinicasehospitais',
     views:{
       'view-inicial': {
-        templateUrl: 'templates/tarefas.html',
-         controller: "TarefasCtrl"
+        templateUrl: 'templates/clinicasehospitais.html',
+         controller: "clinicasehospitaisCtrl"
       
       }
     }
   })
-
+.state('informacoes', {
+    url: '/informacoes',
+    views:{
+      'view-inicial': {
+        templateUrl: 'templates/info.html'
+         
+      
+      }
+    }
+  })
 
 
   $urlRouterProvider.otherwise('/login');
