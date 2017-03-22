@@ -1,5 +1,4 @@
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
-
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
    
@@ -12,7 +11,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
  
       StatusBar.styleDefault();
     }
-  });
+ 
+  })
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -52,6 +52,4 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 
   $urlRouterProvider.otherwise('/login');
-
-});
-
+})
