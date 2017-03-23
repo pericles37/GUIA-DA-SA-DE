@@ -31,3 +31,4 @@ function converterObjParaArray (obj) {
   }
   return array;
 }
+  
