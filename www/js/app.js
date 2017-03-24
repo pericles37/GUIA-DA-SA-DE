@@ -35,15 +35,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'view-inicial': {
         templateUrl: 'templates/clinicasehospitais.html',
          controller: "clinicasehospitaisCtrl"
-      
       }
     }
   })
-.state('informacoes', {
-    url: '/informacoes',
+.state('info', {
+    url: '/info/:clinica',
     views:{
       'view-inicial': {
-        templateUrl: 'templates/info.html'
+        templateUrl: 'templates/info.html',
+        controller: "informacoesCtrl"
          
       
       }

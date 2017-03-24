@@ -1,23 +1,10 @@
 <ion-view view-title="Guia da Saude">
     <ion-content>
 
-   <body>
-       
-    <li class="item" ng-click="informacoes()">
-    femina
-    </li>
-    
-  
-<li class="item" ng-click="informacoes()">
-    Santa Rosa 
-</li>
-
-<li class= "item" ng-click="informacoes()">
-    São Mateus
-</li>
-
-   </body>
-
+          <a class="item" href="#/info/{{clinica}}" ng-repeat="clinica in clinicas">
+            {{clinica}}
+          </a>
+        
    
     </ion-content>
 </ion-view>
