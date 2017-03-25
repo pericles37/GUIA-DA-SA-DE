@@ -56,7 +56,120 @@
   }
 
 })
+.controller('clinicasehospitaisCtrl', function($scope, $state, Tarefas) {
 
+  $scope.clinicas = [
+    'Femina',
+    'Santa Rosa',
+    'São Matheus'
+  ]
+
+  $scope.informacoes = function() {
+   $state.go("informacoes");
+  }
+})
+.controller('especialidadesCtrl', function($scope, $stateParams, Tarefas) {
+
+
+  var feminaespecialidades = {
+    especialidades : Cirurgião Geral
+Cirurgião Pediátrico
+Cirurgião Vascular
+Clínica Médica
+Dermatologista
+Endocrinologista
+Fonoaudiologia
+Gastroenterologia
+Generalista
+Genética Clínica
+Ginecologia
+Mastologia
+Medicina Reprodutiva
+Neonatalogia
+Nutricionista
+Obesidade
+Obstetrícia
+Oftalmologista
+Oncologista
+Pediatra
+Pneumologia
+Proctologista
+Psiquiatra
+Uroginecologista
+Urologista
+    preços :
+};
+
+
+
+  var santaRosaespecialidades = {
+   especialidades :Cirurgião Geral
+Cirurgião Pediátrico
+Cirurgião Vascular
+Clínica Médica
+Dermatologista
+Endocrinologista
+Fonoaudiologia
+Gastroenterologia
+Generalista
+Genética Clínica
+Ginecologia
+Mastologia
+Medicina Reprodutiva
+Neonatalogia
+Nutricionista
+Obesidade
+Obstetrícia
+Oftalmologista
+Oncologista
+Pediatra
+Pneumologia
+Proctologista
+Psiquiatra
+Uroginecologista
+Urologista 
+    preços :
+  }
+  var SaoMatheusespecialidades = {
+    especialidades : Cirurgião Geral
+Cirurgião Pediátrico
+Cirurgião Vascular
+Clínica Médica
+Dermatologista
+Endocrinologista
+Fonoaudiologia
+Gastroenterologia
+Generalista
+Genética Clínica
+Ginecologia
+Mastologia
+Medicina Reprodutiva
+Neonatalogia
+Nutricionista
+Obesidade
+Obstetrícia
+Oftalmologista
+Oncologista
+Pediatra
+Pneumologia
+Proctologista
+Psiquiatra
+Uroginecologista
+Urologista
+    preços :
+  }
+
+  $scope.especialidades = {}
+
+  if ($stateParams.clinica === 'Femina') {
+    $scope.informacoes = feminaInfo;
+  } else if ($stateParams.clinica === 'Santa Rosa') {
+    $scope.informacoes = santaRosaInfo;
+  }else if ($stateParams.clinica === 'São Matheus') {
+    $scope.informacoes = SaoMatheusInfo;
+  }
+
+})
 
 function converterObjParaArray (obj) {
   var array = [];
