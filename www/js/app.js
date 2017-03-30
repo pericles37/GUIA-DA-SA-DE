@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+     angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
    
@@ -44,8 +44,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'view-inicial': {
         templateUrl: 'templates/info.html',
         controller: "informacoesCtrl"
-         
-      
+      }
+    }
+  })
+  .state('especialidades', {
+    url: '/especialidades/:clinica',
+    views:{
+      'view-inicial': {
+        templateUrl: 'templates/especialidades.html',
+        controller: "especialidadesCtrl"
       }
     }
   })

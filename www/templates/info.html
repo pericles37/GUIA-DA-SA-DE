@@ -1,22 +1,21 @@
 <ion-view view-title="informações">
     <ion-content>
         <ul class="list">
-    <li class="item">
-      Fone: {{informacoes.telefone}}
-    </li>
- 
- <li class="item">
-      {{informacoes.endereco}}
+            <li class="item">
+            Fone: {{informacoes.telefone}}
+            </li>
 
-    </li>
-    <li class="item" ng-click="especialidades">
-     Especialidades
+            <li class="item" ng-click="especialidades()">
+                especialidades e Preços Medios
+            </li>
+        </ul>
 
-    </li>
-     </li>
-    <li class="item">
-    Como chegar 
-    </li>
-</ul>
-          </ion-content>
-</ion-view>
+        <button class="button button-positive  button-small">
+            Como chegar 
+        </button>
+
+        <p>{{informacoes.endereco}}</p>
+
+    
+    </ion-content>  
+</ion-view >

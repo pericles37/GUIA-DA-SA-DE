@@ -1,4 +1,3 @@
-
  angular.module('starter.controllers', [])
 
 .controller('LoginCtrl', function($scope, $state, Login) {
@@ -28,8 +27,7 @@
    $state.go("informacoes");
   }
 })
-.controller('informacoesCtrl', function($scope, $stateParams, Tarefas) {
-
+.controller('informacoesCtrl', function($scope, $stateParams, $state, Tarefas) {
 
   var feminaInfo = {
     telefone: '3025-2525',
@@ -51,122 +49,122 @@
     $scope.informacoes = feminaInfo;
   } else if ($stateParams.clinica === 'Santa Rosa') {
     $scope.informacoes = santaRosaInfo;
-  }else if ($stateParams.clinica === 'São Matheus') {
+  } else if ($stateParams.clinica === 'São Matheus') {
     $scope.informacoes = SaoMatheusInfo;
   }
+    $scope.especialidades = function() {
+      $state.go("especialidades", {clinica: $stateParams.clinica});
+    }
 
-})
-.controller('clinicasehospitaisCtrl', function($scope, $state, Tarefas) {
-
-  $scope.clinicas = [
-    'Femina',
-    'Santa Rosa',
-    'São Matheus'
-  ]
-
-  $scope.informacoes = function() {
-   $state.go("informacoes");
-  }
 })
 .controller('especialidadesCtrl', function($scope, $stateParams, Tarefas) {
 
 
-  var feminaespecialidades = {
-    especialidades : Cirurgião Geral
-Cirurgião Pediátrico
-Cirurgião Vascular
-Clínica Médica
-Dermatologista
-Endocrinologista
-Fonoaudiologia
-Gastroenterologia
-Generalista
-Genética Clínica
-Ginecologia
-Mastologia
-Medicina Reprodutiva
-Neonatalogia
-Nutricionista
-Obesidade
-Obstetrícia
-Oftalmologista
-Oncologista
-Pediatra
-Pneumologia
-Proctologista
-Psiquiatra
-Uroginecologista
-Urologista
-    preços :
-};
+  var feminaespecialidades = [
+ 'Angiologia', 
+ 'Cardiologia',	 
+ 'Clínica Geral',	
+ 'Coloproctologia',	
+ 'Dermatologia',	 
+ 'Endocrinologia',	 	
+ 'Fisioterapia',	
+ 'Fonoaudiologia',	 	 
+ 'Geriatria',	
+ 'Ginecologia',	 
+ 'Hematologia',	 
+ 'Homeopatia',	 
+ 'Infectologia',
+ 'Nefrologia',	
+ 'Neurologia',	 
+ 'Nutrição',	 
+ 'Nutrologia',		 
+ 'Oftalmologia',	 
+ 'Oncologia',	 
+ 'Ortopedia e Traumatologia',	
+ 'Otorrinolaringologia',
+ 'Pediatria	',
+ 'Pneumologia',	 
+ 'Psicologia',
+ 'Psicopedagogia',	 
+ 'Psiquiatria',
+ 'Reumatologia',	 
+ 'Urologia'	
+  ];
+   
+    var Santarosaespecialidades = [
+ 'Angiologia', 
+ 'Cardiologia',	 
+ 'Clínica Geral',	
+ 'Coloproctologia',	
+ 'Dermatologia',	 
+ 'Endocrinologia',	 	
+ 'Fisioterapia',	
+ 'Fonoaudiologia',	 	 
+ 'Geriatria',	
+ 'Ginecologia',	 
+ 'Hematologia',	 
+ 'Homeopatia',	 
+ 'Infectologia',
+ 'Nefrologia',	
+ 'Neurologia',	 
+ 'Nutrição',	 
+ 'Nutrologia',		 
+ 'Oftalmologia',	 
+ 'Oncologia',	 
+ 'Ortopedia e Traumatologia',	
+ 'Otorrinolaringologia',
+ 'Pediatria	',
+ 'Pneumologia',	 
+ 'Psicologia',
+ 'Psicopedagogia',	 
+ 'Psiquiatria',
+ 'Reumatologia',	 
+ 'Urologia'	
+  ];
+  
+  
+  var Saomatheusespecialidades = [
+  'Angiologia', 
+ 'Cardiologia',	 
+ 'Clínica Geral',	
+ 'Coloproctologia',	
+ 'Dermatologia',	 
+ 'Endocrinologia',	 	
+ 'Fisioterapia',	
+ 'Fonoaudiologia',	 	 
+ 'Geriatria',	
+ 'Ginecologia',	 
+ 'Hematologia',	 
+ 'Homeopatia',	 
+ 'Infectologia',
+ 'Nefrologia',	
+ 'Neurologia',	 
+ 'Nutrição',	 
+ 'Nutrologia',		 
+ 'Oftalmologia',	 
+ 'Oncologia',	 
+ 'Ortopedia e Traumatologia',	
+ 'Otorrinolaringologia',
+ 'Pediatria	',
+ 'Pneumologia',	 
+ 'Psicologia',
+ 'Psicopedagogia',	 
+ 'Psiquiatria',
+ 'Reumatologia',	 
+ 'Urologia'	
+  ];
+ 
 
-
-
-  var santaRosaespecialidades = {
-   especialidades :Cirurgião Geral
-Cirurgião Pediátrico
-Cirurgião Vascular
-Clínica Médica
-Dermatologista
-Endocrinologista
-Fonoaudiologia
-Gastroenterologia
-Generalista
-Genética Clínica
-Ginecologia
-Mastologia
-Medicina Reprodutiva
-Neonatalogia
-Nutricionista
-Obesidade
-Obstetrícia
-Oftalmologista
-Oncologista
-Pediatra
-Pneumologia
-Proctologista
-Psiquiatra
-Uroginecologista
-Urologista 
-    preços :
-  }
-  var SaoMatheusespecialidades = {
-    especialidades : Cirurgião Geral
-Cirurgião Pediátrico
-Cirurgião Vascular
-Clínica Médica
-Dermatologista
-Endocrinologista
-Fonoaudiologia
-Gastroenterologia
-Generalista
-Genética Clínica
-Ginecologia
-Mastologia
-Medicina Reprodutiva
-Neonatalogia
-Nutricionista
-Obesidade
-Obstetrícia
-Oftalmologista
-Oncologista
-Pediatra
-Pneumologia
-Proctologista
-Psiquiatra
-Uroginecologista
-Urologista
-    preços :
-  }
-
-  $scope.especialidades = {}
-
-  if ($stateParams.clinica === 'Femina') {
-    $scope.informacoes = feminaInfo;
-  } else if ($stateParams.clinica === 'Santa Rosa') {
-    $scope.informacoes = santaRosaInfo;
-  }else if ($stateParams.clinica === 'São Matheus') {
-    $scope.informacoes = SaoMatheusInfo;
+  $scope.especialidades = [];
+  alert($stateParams.clinica)
+   if ($stateParams.clinica === 'Femina') {
+    $scope.especialidades = feminaespecialidades;
+   }
+  else if ($stateParams.clinica === 'Santa Rosa') {
+      $scope.especialidades = Santarosaespecialidades;
+   }
+  else if ($stateParams.clinica === 'São matheus') {
+       $scope.especialidades = Saomatheusespecialidades;
   }
 
 })
