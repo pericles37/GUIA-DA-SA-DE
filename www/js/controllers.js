@@ -61,7 +61,6 @@
 
 
   var feminaespecialidades = [
- 'Angiologia', 
  'Cardiologia',	 
  'Clínica Geral',	
  'Coloproctologia',	
@@ -91,8 +90,7 @@
  'Urologia'	
   ];
    
-    var Santarosaespecialidades = [
- 'Angiologia', 
+    var Santarosaespecialidades = [ 
  'Cardiologia',	 
  'Clínica Geral',	
  'Coloproctologia',	
@@ -124,7 +122,6 @@
   
   
   var Saomatheusespecialidades = [
-  'Angiologia', 
  'Cardiologia',	 
  'Clínica Geral',	
  'Coloproctologia',	
@@ -156,7 +153,6 @@
  
 
   $scope.especialidades = [];
-  alert($stateParams.clinica)
    if ($stateParams.clinica === 'Femina') {
     $scope.especialidades = feminaespecialidades;
    }
