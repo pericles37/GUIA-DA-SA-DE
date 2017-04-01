@@ -61,7 +61,7 @@
 
 
   var feminaespecialidades = [
- 'Cardiologia',	 
+ 'Cardiologista',	 
  'Clínica Geral',	
  'Coloproctologia',	
  'Dermatologia',	 
@@ -162,9 +162,20 @@
   else if ($stateParams.clinica === 'São matheus') {
        $scope.especialidades = Saomatheusespecialidades;
   }
+})
+.controller('CadastroCtrl', function($scope, $state, Tarefas) {
+    $scope.nome = '';
+    $scope.telefone ='';
+    $scope.endereco ='';
+    $scope.especialidades =''; 
+    
+  
+
+  $scope.cadastro = function(nome,telefone,endereco,especialidades) {
+   
+  }
 
 })
-
 function converterObjParaArray (obj) {
   var array = [];
   for (var key in obj) {

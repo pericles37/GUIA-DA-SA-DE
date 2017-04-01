@@ -2,11 +2,12 @@ angular.module('starter.services', [])
 
 .factory("Context", function() {
 var config = {
-    apiKey: "AIzaSyDjQgRtvJNZkvhBSCveyXbmdv5n7EFY6Jg",
-    authDomain: "html-mil-grau.firebaseapp.com",
-    databaseURL: "https://html-mil-grau.firebaseio.com",
-    storageBucket: "html-mil-grau.appspot.com",
-    messagingSenderId: "906905468037"
+    apiKey: "AIzaSyA7VCQyKBwvKB6JDa7OXq2_WmF6DBBMcfM",
+    authDomain: "guia-da-saude.firebaseapp.com",
+    databaseURL: "https://guia-da-saude.firebaseio.com",
+    projectId: "guia-da-saude",
+    storageBucket: "guia-da-saude.appspot.com",
+    messagingSenderId: "69814055076"
   };
 
 firebase.initializeApp(config);
