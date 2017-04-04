@@ -56,6 +56,30 @@ return {
      }
    }
  })
+
+.factory("Clinicas", function(Context){
+   return{
+     salvar: function(nome,telefone,endereco,especialidades,callback){
+        var messageListRef = firebase.database().ref('clinicas');
+        var newMessageRef = messageListRef.push();
+        
+        newMessageRef.set({
+          nome: nome,
+          telefone:telefone,
+          endereco:endereco,
+          especialidades:especialidades
+
+        }).then(function () {
+          callback()
+        })
+        .catch(function (error) {
+          callback(error)
+        })
+     }
+   }
+ })
+
+
  function converterObjParaArray (obj) {
   var array = [];
   for (var key in obj) {
@@ -65,4 +89,3 @@ return {
   return array;
 }
 
- 

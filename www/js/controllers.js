@@ -163,16 +163,19 @@
        $scope.especialidades = Saomatheusespecialidades;
   }
 })
-.controller('CadastroCtrl', function($scope, $state, Tarefas) {
+.controller('CadastroCtrl', function($scope, $state, Clinicas) {
     $scope.nome = '';
     $scope.telefone ='';
     $scope.endereco ='';
     $scope.especialidades =''; 
-    
   
 
   $scope.cadastro = function(nome,telefone,endereco,especialidades) {
-   
+   Clinicas.salvar(nome,telefone,endereco,especialidades, function(error) {
+      if (error) {
+        alert(error)
+      }
+   })
   }
 
 })

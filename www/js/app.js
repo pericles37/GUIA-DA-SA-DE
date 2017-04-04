@@ -56,6 +56,15 @@
       }
     }
   })
+  .state('cadastro', {
+    url: '/cadastro',
+    views:{
+      'view-inicial': {
+        templateUrl: 'templates/cadastroclinicas.html',
+        controller: "CadastroCtrl"
+      }
+    }
+  })
 
 
   $urlRouterProvider.otherwise('/login');
